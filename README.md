@@ -1,2 +1,2 @@
 # bookbot
-Exercise from Boot.Dev
+BookBot is my first git project!
