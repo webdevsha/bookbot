@@ -50,6 +50,16 @@ def generate_letter_report(text):
     for letter, count in sorted_letter_count.items():
         print(f"{letter}: {count}")
 
+def count_word(text, word):
+    word_count = 0
+    for i in range(len(text) - len(word) + 1):
+        if text[i:i+len(word)].lower() == word.lower():
+            word_count += 1
+    return word_count
 
-text = "The text of Frankenstein"
+text = get_book_text(book_path)
+word_count = count_word(text, "ugly")
+
+print("The word 'ugly' appears", word_count, "times in the text.")
 generate_letter_report(text)
+
